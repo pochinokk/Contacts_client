@@ -1,13 +1,10 @@
-FROM node:18-alpine
+FROM node:14
 
-WORKDIR /app
-
+WORKDIR /usr/src/app
 COPY package*.json ./
-
-RUN npm install -g @angular/cli && npm install
-
+RUN npm install
 COPY . .
 
-EXPOSE 4200
-
-CMD ["ng", "serve"]
+RUN npm run build --prod
+EXPOSE 80
+CMD ["npx", "http-server", "dist/contacts-app-frontend"]
