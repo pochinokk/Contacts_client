@@ -8,7 +8,7 @@ import { Contact } from '../models/contact';
 })
 export class ContactService {
   //private apiUrl = 'http://localhost:5000/api/contacts';
-  private apiUrl = 'https://contacts-rsql.onrender.com:10000/api/contacts';
+  private apiUrl = 'https://contacts-rsql.onrender.com/api/contacts';
 
   constructor(private http: HttpClient) {}
 
