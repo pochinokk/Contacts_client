@@ -7,4 +7,4 @@ COPY . .
 
 RUN npm run build --prod
 EXPOSE 80
-CMD ["npx", "http-server", "dist/contacts-app-frontend"]
+CMD ["npx", "http-server", "dist/contacts-app-frontend/browser"]
